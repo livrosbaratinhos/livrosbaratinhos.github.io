@@ -1,0 +1,22 @@
+<!doctype html>
+<html data-ng-app="livrosbaratinhos">
+<head>
+    <meta charset="utf-8">
+    <title>Livros Baratinhos - Pague um centavo por página.</title>
+<link href="/app.237ed996e919414ea42d8c4a88cc575c.css" rel="stylesheet"></head>
+<body data-ng-controller="IndexController as vc">
+    <header class="hero">
+        <div class="container">
+            <h1 class="hero__title"> Encontrados {{ vc.vm.books.length }} livros baratinhos</h1>
+            <h2 class="hero__subtitle">Compre qualquer um dos livros dessa lista pelo valor equivalente de 1 centavo a página.</h2>
+        </div>
+    </header>
+    <main class="grid container">
+        <div data-ng-repeat="livro in vc.vm.books track by $index" class="grid__item">
+            <book-box book="livro"></book-box>
+        </div>
+    </main>
+
+
+<script type="text/javascript" src="/vendor.9d074315056cabf99be7.js"></script><script type="text/javascript" src="/app.9d074315056cabf99be7.js"></script></body>
+</html>
