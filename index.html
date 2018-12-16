@@ -4,20 +4,27 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <title>Livros Baratinhos - Pague um centavo por página.</title>
-<link href="/app.237ed996e919414ea42d8c4a88cc575c.css" rel="stylesheet"></head>
+<link href="/app.00b0aa869155d3b4978373197041da70.css" rel="stylesheet"></head>
 <body data-ng-controller="IndexController as vc">
-    <header class="hero">
-        <div class="container">
-            <h1 class="hero__title"> Encontrados {{ vc.vm.books.length }} livros baratinhos</h1>
-            <h2 class="hero__subtitle">Compre qualquer um dos livros dessa lista pelo valor equivalente de 1 centavo a página.</h2>
-        </div>
-    </header>
-    <main class="grid container">
-        <div data-ng-repeat="livro in vc.vm.books track by $index" class="grid__item">
-            <book-box book="livro"></book-box>
-        </div>
-    </main>
+<header class="hero">
+    <div class="container">
+        <h1 class="hero__title" data-ng-bind="vc.title"></h1>
+        <h2 class="hero__subtitle">Compre qualquer um dos livros dessa lista pelo valor equivalente de 1 centavo a
+            página.</h2>
+    </div>
+</header>
+<main class="grid container">
+    <div data-ng-repeat="item in [1,2,3,4,5,6,7,8] track by $index"
+         data-ng-if="vc.vm.isLoading && vc.vm.books.length === 0">
+        <book-box-placeholder></book-box-placeholder>
+    </div>
+    <div data-ng-repeat="livro in vc.vm.books track by $index" class="grid__item"
+         data-ng-if="vc.vm.isLoading === false && vc.vm.books.length > 0">
+        <book-box book="livro"></book-box>
+    </div>
+
+</main>
 
 
-<script type="text/javascript" src="/vendor.9d074315056cabf99be7.js"></script><script type="text/javascript" src="/app.9d074315056cabf99be7.js"></script></body>
+<script type="text/javascript" src="/vendor.0577498a8beb88600ffa.js"></script><script type="text/javascript" src="/app.0577498a8beb88600ffa.js"></script></body>
 </html>
