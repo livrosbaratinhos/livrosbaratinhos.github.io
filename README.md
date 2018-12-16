@@ -1,7 +1,4 @@
-<<<<<<< HEAD
 # livrosbaratinhos.github.io
-=======
-# Webpack ES6 boilerplate
 
 [![tests][tests]][tests-url]
 [![coverage][cover]][cover-url]
@@ -59,4 +56,3 @@ _webpack-es6-boilerplate_ is available under MIT.
 
 [cover]: https://codecov.io/gh/jluccisano/webpack-es6-boilerplate/branch/master/graph/badge.svg
 [cover-url]: https://codecov.io/gh/jluccisano/webpack-es6-boilerplate
->>>>>>> comeca projeto com webpack
