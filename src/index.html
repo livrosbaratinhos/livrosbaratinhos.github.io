@@ -1,10 +1,22 @@
 <!doctype html>
-<html>
-  <head>
+<html data-ng-app="livrosbaratinhos">
+<head>
     <meta charset="utf-8">
-    <title>Webpack ES6 Boilerplate</title>
-  </head>
-  <body>
-    <div class="hello" id="root"></div>
-  </body>
+    <title>Livros Baratinhos - Pague um centavo por página.</title>
+</head>
+<body data-ng-controller="IndexController as vc">
+    <header class="hero">
+        <div class="container">
+            <h1 class="hero__title"> Encontrados {{ vc.vm.books.length }} livros baratinhos</h1>
+            <h2 class="hero__subtitle">Compre qualquer um dos livros dessa lista pelo valor equivalente de 1 centavo a página.</h2>
+        </div>
+    </header>
+    <main class="grid container">
+        <div data-ng-repeat="livro in vc.vm.books track by $index" class="grid__item">
+            <book-box book="livro"></book-box>
+        </div>
+    </main>
+
+
+</body>
 </html>

@@ -1,6 +1,8 @@
-import sayHello from './hello';
-import './index.scss';
+import "index.scss";
+import "book.scss";
+import angular from "angular";
+import BooksModuleName from "./books/Books.module";
+import IndexController from "./Index.controller";
 
-document.getElementById('root').innerHTML = sayHello();
-
-
+angular.module("livrosbaratinhos", [BooksModuleName]);
+angular.module("livrosbaratinhos").controller("IndexController", IndexController);
